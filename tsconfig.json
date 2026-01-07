@@ -1,0 +1,17 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    }
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    ".expo/types/**/*.ts",
+    "expo-env.d.ts"
+, "Constants/colors.js", "Constants/spacing.js", "data/products.js", "Components/ProductCard.jsx", "app/(tabs)/index.jsx", "app/product/[id].jsx", "app/(tabs)/cart.jsx", "app/checkout.jsx", "app/(tabs)/_layout.jsx"  ]
+}

@@ -1,0 +1,4 @@
+One product detail screen
+But content changes based on product id
+
+==> Dynamic Product Page
