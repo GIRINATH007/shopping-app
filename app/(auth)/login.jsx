@@ -1,4 +1,3 @@
-// Route groups organize files but do NOT appear in the URL. ( each group can have its own layout )
 
 // Core Firebase auth functions:
 // 1. createUserWithEmailAndPassword(auth, EmailAuthCredential, password);

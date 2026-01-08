@@ -10,7 +10,7 @@ export default function RootLayout() {
     <ThemeProvider>
       <FavoritesProvider>
         <CartProvider>
-          {/* Global Status Bar (will be controlled later) */}
+          {/* Global Status Bar*/}
           <StatusBar style="auto" />
 
           {/* Global Navigation */}

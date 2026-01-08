@@ -6,7 +6,7 @@ const CartContext = createContext();
 export function CartProvider({ children }) {
   const [cart, setCart] = useState([]);
 
-  // 🔹 Load cart once on app start
+  //  Load cart once on app start
   useEffect(() => {
     const loadCart = async () => {
       const stored = await AsyncStorage.getItem("cart");
@@ -17,7 +17,7 @@ export function CartProvider({ children }) {
     loadCart();
   }, []);
 
-  // 🔹 Save cart whenever it changes
+  // Save cart whenever it changes
   useEffect(() => {
     AsyncStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);

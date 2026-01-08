@@ -17,7 +17,7 @@ export default function CartScreen() {
   const { cart, setCart } = useCart();
   const { colors, isDark } = useTheme();
 
-  // 🎨 Theme-aware colors
+  // Theme colors
   const screenBg = isDark ? colors.background : "#f5f5f5";
   const cardBg = isDark ? "#1e1e1e" : "#ffffff";
   const cardBorder = isDark ? "#2c2c2c" : "transparent";

@@ -63,6 +63,15 @@ export default function CheckoutScreen() {
     saveAddresses();
   }, [addresses]);
 
+  const deleteAddress = async (id) => {
+    setAddresses((prev) => prev.filter((addr) => addr.id !== id));
+
+    if (selectedAddressId === id) {
+      setSelectedAddressId(null);
+    }
+  };
+  // setAddresses triggers your existing useEffect
+
   const { cart } = useCart();
   const { colors } = useTheme();
 
@@ -150,6 +159,18 @@ export default function CheckoutScreen() {
               onPress={() => setSelectedAddressId(item.id)}
             >
               <View style={styles.optionHeaders}>
+                {/* DELETE BUTTON */}
+                <TouchableOpacity
+                  onPress={() => deleteAddress(item.id)}
+                  style={{ padding: 6 }}
+                >
+                  <Ionicons
+                    name="trash-outline"
+                    size={18}
+                    color={colors.textSecondary}
+                  />
+                </TouchableOpacity>
+
                 <View style={{ flex: 1 }}>
                   <Text
                     style={[styles.optionTitle, { color: colors.textPrimary }]}

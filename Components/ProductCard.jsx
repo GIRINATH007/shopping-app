@@ -30,7 +30,7 @@ export default function ProductCard({ item, onPress }) {
       onPress={onPress}
       activeOpacity={0.9}
     >
-      {/* ❤️ Favorite Button */}
+      {/* Favorite Button */}
       <TouchableOpacity
         style={[
           styles.heartBadge,
