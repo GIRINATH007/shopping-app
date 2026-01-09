@@ -1,50 +1,107 @@
-# Welcome to your Expo app 👋
+🛒 Shopping App (Expo + React Native)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This is a mobile shopping application built using Expo and React Native.
+The app demonstrates product listing, cart management, light/dark theming, and navigation using file-based routing.
 
-## Get started
+🚀 Getting Started
 
-1. Install dependencies
+Follow these steps to run the app locally.
 
-   ```bash
-   npm install
-   ```
+Prerequisites
 
-2. Start the app
+Node.js installed
 
-   ```bash
-   npx expo start
-   ```
+npm or yarn
 
-In the output, you'll find options to open the app in a
+Install dependencies
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+npm install
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+Start the development server
 
-## Get a fresh project
+npx expo start
 
-When you're ready, run:
+Run the app
 
-```bash
-npm run reset-project
-```
+After starting the server, you can open the app using:
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Expo Go (scan the QR code on your phone)
 
-## Learn more
+Android Emulator
 
-To learn more about developing your project with Expo, look at the following resources:
+iOS Simulator (macOS only)
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+🧠 How the App Works
+File-based Routing
 
-## Join the community
+The app uses Expo Router, which automatically maps files inside the app/ directory to screens.
+Navigation does not require manual route configuration.
 
-Join our community of developers creating universal apps.
+Example:
+app/index.tsx → Home screen
+app/cart.tsx → Cart screen
+app/product/[id].tsx → Product details screen
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Product Flow
+
+Products are fetched and displayed in a list
+
+Each product card navigates to a product details screen
+
+Users can add products to the cart
+
+Cart Functionality
+
+Cart state is managed using Context API
+
+Users can:
+
+Increase or decrease item quantity
+
+Remove items from the cart
+
+An empty-state UI is shown when the cart has no items
+
+Total price is calculated dynamically
+
+Theming (Light / Dark Mode)
+
+The app supports both light and dark themes
+
+Theme values (colors, background, text) are managed using a custom ThemeContext
+
+UI updates automatically when the theme changes
+
+Button & Interaction Handling
+
+The Checkout button is disabled when the cart is empty
+
+Disabled buttons visually indicate state using reduced opacity
+
+User interactions are handled using TouchableOpacity
+
+🧱 Tech Stack
+
+React Native
+
+Expo
+
+Expo Router
+
+Context API
+
+FlatList
+
+Ionicons
+
+📝 Notes
+
+This project focuses on frontend logic and UI
+
+Backend APIs can be integrated easily in the future
+
+The codebase is modular and scalable
+
+👤 Author
+
+Built and maintained by Girinath
