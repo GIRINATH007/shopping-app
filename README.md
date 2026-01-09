@@ -1,69 +1,109 @@
-# Shopping App (Expo + React Native)
-This is a mobile shopping application built using Expo and React Native.
-The app demonstrates product listing, cart management, light/dark theming, and navigation using file-based routing.
+#  Shopping App – React Native (Expo)
 
-# Getting Started
-Follow these steps to run the app locally.
+A modern **mobile shopping application** built using **React Native + Expo**.  
+This app demonstrates clean UI, efficient state management, pagination handling, theming, and scalable architecture suitable for real-world production apps.
 
-Prerequisites
-Node.js installed
-npm or yarn
-Install dependencies
+---
+
+##  Features
+
+-  Product listing with pagination
+-  Search & filter functionality
+-  Cart management (add / remove items)
+-  Light & Dark theme support
+-  Optimized FlatList rendering
+-  Clean folder structure & reusable components
+-  Responsive UI for different screen sizes
+
+---
+
+##  Tech Stack
+
+- **React Native**
+- **Expo**
+- **JavaScript**
+- **Context API** (state management)
+- **FakeStore API** (mock backend)
+
+>  *Note:* FakeStore API does **not provide true backend pagination**, so pagination is handled on the client side in a backend-friendly manner.
+
+---
+
+##  Folder Structure
+shopping-app/
+│
+├── app/ # Screens & navigation
+├── components/ # Reusable UI components
+├── context/ # Context API (Cart, Theme)
+├── constants/ # Colors, spacing, themes
+├── services/ # API logic
+├── assets/ # Images & icons
+└── README.md
+
+
+
+---
+
+##  Pagination Logic (Important)
+
+Since **FakeStore API does not support server-side pagination**, pagination is implemented on the **client side** by:
+
+- Fetching data once
+- Splitting data into pages
+- Loading more items on scroll (`onEndReached`)
+
+ **This logic is easily replaceable**  
+When a real backend is available, the API call can be updated to:
+
+```js
+GET /products?page=1&limit=10
+```
+
+This makes the app scalable and backend-integratable.
+
+
+
+## Getting Started
+1. Clone the Repository
+git clone [https://github.com/<your-username>/shopping-app.git](https://github.com/GIRINATH007/shopping-app)
+cd shopping-app
+
+2️. Install Dependencies
 npm install
-Start the development server
+
+3️. Start the App
 npx expo start
-Run the app
-After starting the server, you can open the app using:
-Expo Go (scan the QR code on your phone)
-Android Emulator
-iOS Simulator (macOS only)
 
-# How the App Works
-File-based Routing
+Scan the QR code using Expo Go app on your mobile device.
 
-The app uses Expo Router, which automatically maps files inside the app/ directory to screens.
-Navigation does not require manual route configuration.
 
-Example:
-app/index.tsx → Home screen
-app/cart.tsx → Cart screen
-app/product/[id].tsx → Product details screen
 
-Product Flow
-Products are fetched and displayed in a list
-Each product card navigates to a product details screen
-Users can add products to the cart
+## Video Walkthrough
 
-Cart Functionality
-Cart state is managed using Context API
-Users can:
-Increase or decrease item quantity
-Remove items from the cart
-An empty-state UI is shown when the cart has no items
-Total price is calculated dynamically
+A complete walkthrough demonstrating:
 
-Theming (Light / Dark Mode)
-The app supports both light and dark themes
-Theme values (colors, background, text) are managed using a custom ThemeContext
-UI updates automatically when the theme changes
-Button & Interaction Handling
+App flow
+Pagination
+Cart behavior
+Theme switching
 
-The Checkout button is disabled when the cart is empty
-Disabled buttons visually indicate state using reduced opacity
-User interactions are handled using TouchableOpacity
+### Video Link:
+https://drive.google.com/file/d/10-2NNC3KxI_IcHfm3U8QPtTjYAVfeifC/view?usp=sharing
 
-# Tech Stack
-React Native
-Expo
-Expo Router
-Context API
-FlatList
-Ionicons
+## Screen shots:
+![WhatsApp Image 2026-01-09 at 20 22 52](https://github.com/user-attachments/assets/79f09e26-2137-4e7c-8026-cedd5e82dda2)
+![WhatsApp Image 2026-01-09 at 20 22 53](https://github.com/user-attachments/assets/9d94282d-e8cf-4217-ba33-3b0dba63ac61)
+![WhatsApp Image 2026-01-09 at 20 18 34](https://github.com/user-attachments/assets/0ec40f6b-f9cd-4928-92e4-7e07b0801403)
+![WhatsApp Image 2026-01-09 at 20 18 34 (1)](https://github.com/user-attachments/assets/a360c555-7bd3-4f93-be0d-eed32f8fa137)
+![WhatsApp Image 2026-01-09 at 20 18 34 (2)](https://github.com/user-attachments/assets/d4182b4b-b137-4edb-a9b2-4689e973fbee)
+![WhatsApp Image 2026-01-09 at 20 18 35 (1)](https://github.com/user-attachments/assets/c99a001f-8fd2-486a-8618-a1abf0eac421)
+![WhatsApp Image 2026-01-09 at 20 18 36](https://github.com/user-attachments/assets/054bd138-d5c1-41f0-925e-89b11cfab8f7)
+![WhatsApp Image 2026-01-09 at 20 18 35 (2)](https://github.com/user-attachments/assets/db2268bb-3215-4be1-a36b-7526f6c7290d)
+![WhatsApp Image 2026-01-09 at 20 18 35](https://github.com/user-attachments/assets/3e28170e-3ff3-40b8-9dcf-1399695bb120)
 
-# Notes
-This project focuses on frontend logic and UI
-Backend APIs can be integrated easily in the future
-The codebase is modular and scalable
 
-## Author
-Built and maintained by Girinath
+#### Author
+
+GIRINATH
+React Native | Expo | Mobile App Development
+
