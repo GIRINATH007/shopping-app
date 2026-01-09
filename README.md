@@ -65,5 +65,5 @@ This project focuses on frontend logic and UI
 Backend APIs can be integrated easily in the future
 The codebase is modular and scalable
 
-**Author**
+## Author
 Built and maintained by Girinath
